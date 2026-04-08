@@ -577,7 +577,7 @@
         "x": 0,
         "y": 4,
         "w": 8,
-        "h": 7
+        "h": 6
       },
       "id": 8,
       "options": {
@@ -688,7 +688,7 @@
         "x": 8,
         "y": 4,
         "w": 8,
-        "h": 7
+        "h": 6
       },
       "id": 9,
       "options": {
@@ -800,7 +800,7 @@
         "x": 16,
         "y": 4,
         "w": 8,
-        "h": 7
+        "h": 6
       },
       "id": 10,
       "options": {
@@ -879,9 +879,9 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 11,
+        "y": 10,
         "w": 6,
-        "h": 7
+        "h": 6
       },
       "id": 11,
       "options": {
@@ -1086,9 +1086,9 @@
       },
       "gridPos": {
         "x": 6,
-        "y": 11,
+        "y": 10,
         "w": 6,
-        "h": 7
+        "h": 6
       },
       "id": 12,
       "options": {
@@ -1128,7 +1128,7 @@
                 "min_doc_count": "1",
                 "order": "desc",
                 "orderBy": "_count",
-                "size": "10"
+                "size": "${top_n_results:raw}"
               },
               "type": "terms"
             }
@@ -1178,9 +1178,9 @@
       },
       "gridPos": {
         "x": 12,
-        "y": 11,
+        "y": 10,
         "w": 6,
-        "h": 7
+        "h": 6
       },
       "id": 13,
       "options": {
@@ -1220,7 +1220,7 @@
                 "min_doc_count": "1",
                 "order": "desc",
                 "orderBy": "_count",
-                "size": "10"
+                "size": "${top_n:raw}"
               },
               "type": "terms"
             }
@@ -1302,7 +1302,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 18,
+        "y": 16,
         "w": 24,
         "h": 6
       },
@@ -1439,9 +1439,9 @@
       },
       "gridPos": {
         "x": 18,
-        "y": 11,
+        "y": 10,
         "w": 6,
-        "h": 7
+        "h": 6
       },
       "id": 15,
       "options": {
@@ -1481,7 +1481,7 @@
                 "min_doc_count": "1",
                 "order": "desc",
                 "orderBy": "_count",
-                "size": "12"
+                "size": "${top_n:raw}"
               },
               "type": "terms"
             }
@@ -1560,6 +1560,34 @@
       {
         "current": {
           "selected": false,
+          "text": "5",
+          "value": "5"
+        },
+        "hide": 0,
+        "label": "Top N",
+        "name": "top_n",
+        "options": [],
+        "query": "5",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "5",
+          "value": "5"
+        },
+        "hide": 0,
+        "label": "Top N Results",
+        "name": "top_n_results",
+        "options": [],
+        "query": "5",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": false,
           "text": "lab_default",
           "value": "lab_default"
         },
@@ -1595,6 +1623,6 @@
   "timezone": "browser",
   "title": "Kerio Mail Traffic",
   "uid": "kerio-mail-traffic",
-  "version": 7,
+  "version": 8,
   "weekStart": ""
 }

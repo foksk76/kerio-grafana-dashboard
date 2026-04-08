@@ -9,6 +9,30 @@ The format is based on Keep a Changelog and this project currently follows a sim
 No unreleased changes.
 
 
+## [0.1.1] - 2026-04-08
+
+### Added
+
+- Dashboard variable `top_n` for configurable Top-N identities in `Top Senders` and `Top Recipients`.
+- Dashboard variable `top_n_results` for configurable Top-N buckets in `Results`.
+- Optional Grafana feature toggles in Docker Compose for scene-based dashboard capabilities:
+  - `dashboardScene`
+  - `kubernetesDashboards`
+
+### Changed
+
+- `README.ru.md` wording was refined for clearer project audience description.
+- Dashboard lower and middle rows were compacted to a uniform panel height for better viewport fit.
+- `Top Senders` and `Top Recipients` terms aggregations now use `${top_n:raw}`.
+- `Results` terms aggregation now uses `${top_n_results:raw}`.
+
+### Validated
+
+- Dashboard JSON remains syntactically valid after layout and variable updates.
+- Grafana container restart completed successfully and `/api/health` returned `database: ok`.
+- Quick lab run with 100 messages completed successfully with `send_status=sent` for all messages.
+
+
 ## [0.1.0] - 2026-04-08
 
 ### Added
