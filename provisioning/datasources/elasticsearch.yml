@@ -1,0 +1,34 @@
+apiVersion: 1
+prune: true
+
+datasources:
+  - name: Kerio Mail Flows
+    uid: kerio-flow-es
+    type: elasticsearch
+    access: proxy
+    url: ${ELASTICSEARCH_URL}
+    isDefault: true
+    basicAuth: true
+    basicAuthUser: ${ELASTICSEARCH_USER}
+    secureJsonData:
+      basicAuthPassword: ${ELASTICSEARCH_PASSWORD}
+    jsonData:
+      index: ${ELASTICSEARCH_FLOW_INDEX}
+      timeField: "@timestamp"
+      maxConcurrentShardRequests: 5
+
+  - name: Kerio Raw Events
+    uid: kerio-connect-es
+    type: elasticsearch
+    access: proxy
+    url: ${ELASTICSEARCH_URL}
+    isDefault: false
+    basicAuth: true
+    basicAuthUser: ${ELASTICSEARCH_USER}
+    secureJsonData:
+      basicAuthPassword: ${ELASTICSEARCH_PASSWORD}
+    jsonData:
+      index: ${ELASTICSEARCH_EVENTS_INDEX}
+      timeField: "@timestamp"
+      logMessageField: message
+      maxConcurrentShardRequests: 5
