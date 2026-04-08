@@ -99,7 +99,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_received AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_received",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -179,7 +179,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -260,7 +260,7 @@
               "type": "sum"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -426,7 +426,7 @@
               "type": "sum"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -508,7 +508,7 @@
               "type": "avg"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -619,7 +619,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -731,7 +731,7 @@
               "type": "sum"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -843,7 +843,7 @@
               "type": "sum"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -935,7 +935,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_received AND email.subject.keyword:KT-${run_id:raw}-*-peer_to_peer",
+          "query": "event.action:message_received",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -964,7 +964,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_received AND email.subject.keyword:KT-${run_id:raw}-*-mailing",
+          "query": "event.action:message_received",
           "queryType": "lucene",
           "refId": "B",
           "timeField": "@timestamp"
@@ -993,7 +993,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_received AND email.subject.keyword:KT-${run_id:raw}-*-nonexistent",
+          "query": "event.action:message_received",
           "queryType": "lucene",
           "refId": "C",
           "timeField": "@timestamp"
@@ -1022,7 +1022,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_received AND email.subject.keyword:KT-${run_id:raw}-*-aliases_only",
+          "query": "event.action:message_received",
           "queryType": "lucene",
           "refId": "D",
           "timeField": "@timestamp"
@@ -1051,7 +1051,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_received AND email.subject.keyword:KT-${run_id:raw}-*-real_plus_aliases",
+          "query": "event.action:message_received",
           "queryType": "lucene",
           "refId": "E",
           "timeField": "@timestamp"
@@ -1111,7 +1111,7 @@
             "lastNotNull"
           ],
           "fields": "",
-          "values": false
+          "values": true
         },
         "showUnfilled": true,
         "sizing": "auto",
@@ -1143,7 +1143,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -1203,7 +1203,7 @@
             "lastNotNull"
           ],
           "fields": "",
-          "values": false
+          "values": true
         },
         "showUnfilled": true,
         "sizing": "auto",
@@ -1235,7 +1235,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -1346,7 +1346,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_received AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_received",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
@@ -1464,7 +1464,7 @@
             "lastNotNull"
           ],
           "fields": "",
-          "values": false
+          "values": true
         },
         "showUnfilled": true,
         "sizing": "auto",
@@ -1496,7 +1496,7 @@
               "type": "count"
             }
           ],
-          "query": "event.action:message_flow_aggregated AND email.subject.keyword:KT-${run_id:raw}-*",
+          "query": "event.action:message_flow_aggregated",
           "queryType": "lucene",
           "refId": "A",
           "timeField": "@timestamp"
